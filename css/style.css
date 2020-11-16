@@ -1,0 +1,35 @@
+html{
+    cursor: url(../img/martelomenor.png) 30 30, auto;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    border: 5px solid #484848;
+}
+.textos{
+    margin-top: -2%;
+    padding-bottom: 1px;
+    background: #484848;
+    color: white;
+}
+h1{
+    margin-bottom: -1%;
+}
+h6{
+    margin-bottom: 1px;
+    margin-top: 12px;
+}
+img{
+    margin-bottom: 30px;
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;
+    width: 150px;
+}
+/*
+img:hover{
+    box-shadow: 0 0 100px #FFE02E,
+                0 0 125px  #FFE02E,
+                0 0 135px  #FFE02E,
+                0 0 145px  #FFE02E
+}
+  */ 
