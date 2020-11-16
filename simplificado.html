@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Lâmpada</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+
+    <script>
+
+        var quebrada = false;
+        var on = false; 
+        var off = false;
+
+        function lampadaMudar(estado) {
+
+            if (!quebrada){
+                document.getElementById('luz').src = 'img/' +estado+ '.png';
+                if (estado == 'quebrada'){
+                    quebrada = true;
+                }
+            }
+        }
+        
+    </script>
+
+    <style>
+        html{
+            cursor: url(img/martelomenor.png) 30 30, auto;
+        }
+        body{
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            border: 5px solid #484848;
+        }
+        .textos{
+            margin-top: -2%;
+            padding-bottom: 1px;
+            background: #484848;
+            color: white;
+        }
+        h1{
+            margin-bottom: -1%;
+        }
+        h6{
+            margin-bottom: 1px;
+            margin-top: 12px;
+        }
+        img{
+            margin-bottom: 30px;
+            transition: 0.5s;
+            transition-timing-function: ease-in-out;
+            width: 150px;
+        }
+        /*
+        img:hover{
+            box-shadow: 0 0 100px #FFE02E,
+                        0 0 125px  #FFE02E,
+                        0 0 135px  #FFE02E,
+                        0 0 145px  #FFE02E
+        }
+          */  
+    </style>
+
+</head>
+<body>
+
+    <div class="textos">
+        <h1>Acenda a lâmpada</h1>
+        <h6>Ou quebre</h6>
+    </div>
+
+    <img src="img/apagada.png" id="luz" onmouseover="lampadaMudar('acesa')" onmouseout="lampadaMudar('apagada')" onclick="lampadaMudar('quebrada')">
+
+</body>
+</html>
